@@ -15,6 +15,8 @@
     <junit.version>4.12</junit.version>
     <fest-assert.version>1.4</fest-assert.version>
     <javaslang.version>2.0.1</javaslang.version>
+    <javaslang.jackson.version>2.0.1</javaslang.jackson.version>
+    <javaslang.circuitbreaker.version>0.5.0</javaslang.circuitbreaker.version>
     <slf4j.version>1.7.19</slf4j.version>
   </properties>
 
@@ -22,30 +24,65 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
     </dependency>
     <dependency>
       <groupId>io.javaslang</groupId>
       <artifactId>javaslang</artifactId>
-      <version>${javaslang.version}</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <version>${slf4j.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.easytesting</groupId>
       <artifactId>fest-assert</artifactId>
-      <version>${fest-assert.version}</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <dependencyManagement>
+        <dependencies>
+          <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>io.javaslang</groupId>
+            <artifactId>javaslang</artifactId>
+            <version>${javaslang.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+          </dependency>
+          <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+          </dependency>
+          <dependency>
+            <groupId>org.easytesting</groupId>
+            <artifactId>fest-assert</artifactId>
+            <version>${fest-assert.version}</version>
+            <scope>test</scope>
+          </dependency>
+          <dependency>
+              <groupId>io.javaslang</groupId>
+              <artifactId>javaslang-jackson</artifactId>
+              <version>${javaslang.jackson.version}</version>
+          </dependency>
+          <dependency>
+              <groupId>io.github.robwin</groupId>
+              <artifactId>javaslang-circuitbreaker</artifactId>
+              <version>${javaslang.circuitbreaker.version}</version>
+          </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
