@@ -1,7 +1,7 @@
-package $org.koenighotze;
+package ${org.koenighotze};
 
 import org.junit.Test;
-import static org.junit.Assert.assertTrue;
+import static org.fest.assertions.Assertions.assertThat;
 
 /**
  * Unit test for simple App.
@@ -12,6 +12,6 @@ public class AppTest {
      */
     @Test
     public void smoke() {
-        assertTrue(true);
+        assertThat(true).isTrue();
     }
 }
