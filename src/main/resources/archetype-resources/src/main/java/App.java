@@ -1,4 +1,4 @@
-package ${org.koenighotze};
+package ${packageName};
 
 /**
  * Hello world!

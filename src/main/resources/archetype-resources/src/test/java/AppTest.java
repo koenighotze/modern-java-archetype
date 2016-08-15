@@ -1,17 +1,19 @@
-package ${org.koenighotze};
+package ${packageName};
 
-import org.junit.Test;
-import static org.fest.assertions.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 /**
  * Unit test for simple App.
  */
+@DisplayName("A special app name")
 public class AppTest {
     /**
      * Rigourous Test :-)
      */
     @Test
+    @DisplayName("A simple smoke test")
     public void smoke() {
-        assertThat(true).isTrue();
+        assertEquals(1, 1);
     }
 }
